@@ -1,0 +1,17 @@
+C:\Users\micha\Documents\ShooterDemo\.godot\mono\temp\bin\Debug\ShooterDemo.deps.json
+C:\Users\micha\Documents\ShooterDemo\.godot\mono\temp\bin\Debug\ShooterDemo.runtimeconfig.json
+C:\Users\micha\Documents\ShooterDemo\.godot\mono\temp\bin\Debug\ShooterDemo.dll
+C:\Users\micha\Documents\ShooterDemo\.godot\mono\temp\bin\Debug\ShooterDemo.pdb
+C:\Users\micha\Documents\ShooterDemo\.godot\mono\temp\bin\Debug\GodotSharp.dll
+C:\Users\micha\Documents\ShooterDemo\.godot\mono\temp\bin\Debug\GodotSharpEditor.dll
+C:\Users\micha\Documents\ShooterDemo\.godot\mono\temp\obj\Debug\ShooterDemo.csproj.AssemblyReference.cache
+C:\Users\micha\Documents\ShooterDemo\.godot\mono\temp\obj\Debug\ShooterDemo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\micha\Documents\ShooterDemo\.godot\mono\temp\obj\Debug\ShooterDemo.AssemblyInfoInputs.cache
+C:\Users\micha\Documents\ShooterDemo\.godot\mono\temp\obj\Debug\ShooterDemo.AssemblyInfo.cs
+C:\Users\micha\Documents\ShooterDemo\.godot\mono\temp\obj\Debug\ShooterDemo.csproj.CoreCompileInputs.cache
+C:\Users\micha\Documents\ShooterDemo\.godot\mono\temp\obj\Debug\ShooterDemo.csproj.CopyComplete
+C:\Users\micha\Documents\ShooterDemo\.godot\mono\temp\obj\Debug\ShooterDemo.dll
+C:\Users\micha\Documents\ShooterDemo\.godot\mono\temp\obj\Debug\refint\ShooterDemo.dll
+C:\Users\micha\Documents\ShooterDemo\.godot\mono\temp\obj\Debug\ShooterDemo.pdb
+C:\Users\micha\Documents\ShooterDemo\.godot\mono\temp\obj\Debug\ShooterDemo.genruntimeconfig.cache
+C:\Users\micha\Documents\ShooterDemo\.godot\mono\temp\obj\Debug\ref\ShooterDemo.dll

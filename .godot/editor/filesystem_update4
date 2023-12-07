@@ -1,0 +1,8 @@
+res://assets/resources/weapon.cs
+res://scripts/Attachment.cs
+res://scripts/Gun.cs
+res://scripts/Hands.cs
+res://scripts/HudController.cs
+res://scripts/Interactable.cs
+res://scripts/Player.cs
+res://assets/weapons/shotgun.tscn

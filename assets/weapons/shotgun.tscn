@@ -1,0 +1,64 @@
+[gd_scene load_steps=7 format=3 uid="uid://dpa6d3jry6v01"]
+
+[ext_resource type="PackedScene" uid="uid://7i1ek2mm6qf5" path="res://assets/raw_weapons/shotgun2.glb" id="1_ygcs2"]
+[ext_resource type="Script" path="res://scripts/Interactable.cs" id="2_5ir6i"]
+[ext_resource type="Script" path="res://scripts/Gun.cs" id="2_7kkh7"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jsyd5"]
+size = Vector3(0.015, 0.045, 0.27)
+
+[sub_resource type="Animation" id="Animation_b3sny"]
+resource_name = "rechamber_rest"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_k1bpw"]
+_data = {
+"rechamber_rest": SubResource("Animation_b3sny")
+}
+
+[node name="shotgun" node_paths=PackedStringArray("sight", "magazine") instance=ExtResource("1_ygcs2")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
+script = ExtResource("2_7kkh7")
+WeaponName = "Shotgun"
+Damage = 5.0
+Range = 2.0
+FireRate = 2.0
+ReloadSpeed = 2.0
+Ammo = 5
+AmmoCapacity = 5
+AmmoType = "12 Ga"
+sight = NodePath("AttachSight")
+magazine = NodePath("AttachMag")
+recoilX = 1.0
+recoilY = 2.0
+recoilZ = 2.0
+snappiness = 7.0
+returnSpeed = 5.0
+aimInPosition = Vector3(0, -0.125, -0.055)
+aimInRotation = Vector3(0.139626, 0.0872665, 0.497419)
+restPosition = Vector3(0.085, -0.125, 0)
+restRotation = Vector3(0, 0.0872665, 0.122173)
+
+[node name="Interact" type="StaticBody3D" parent="." index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.001, 0)
+collision_layer = 2
+script = ExtResource("2_5ir6i")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Interact" index="0"]
+shape = SubResource("BoxShape3D_jsyd5")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="6"]
+libraries = {
+"": SubResource("AnimationLibrary_k1bpw")
+}
+
+[node name="AttachSight" type="Node3D" parent="." index="7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0199619, 0.0538055)
+
+[node name="AttachMag" type="Node3D" parent="." index="8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00190305, -0.0123379)
+
+[node name="ShootPoint" type="Node3D" parent="." index="9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000407159, 0.0106399, -0.138305)
+
+[node name="AttachBarrel" type="Node3D" parent="." index="10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000407159, 0.0106399, -0.138305)

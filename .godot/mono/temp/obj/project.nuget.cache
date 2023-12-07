@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "Q2z3HjcJAfn9KbP5bhWRuWxo5hbazgrNDE2y+fXETCAxHfpygKP1noveM7p0EV/NGnXB2z2q+fJa/xGoVQwreg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\micha\\Documents\\ShooterDemo\\ShooterDemo.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\micha\\.nuget\\packages\\godot.sourcegenerators\\4.1.1\\godot.sourcegenerators.4.1.1.nupkg.sha512",
+    "C:\\Users\\micha\\.nuget\\packages\\godotsharp\\4.1.1\\godotsharp.4.1.1.nupkg.sha512",
+    "C:\\Users\\micha\\.nuget\\packages\\godotsharpeditor\\4.1.1\\godotsharpeditor.4.1.1.nupkg.sha512"
+  ],
+  "logs": []
+}

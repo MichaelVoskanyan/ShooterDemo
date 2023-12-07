@@ -1,0 +1,55 @@
+[gd_scene load_steps=7 format=3 uid="uid://cv4n2bir4f01"]
+
+[ext_resource type="PackedScene" uid="uid://7un5hnq1bu7" path="res://assets/player.tscn" id="1_8bac4"]
+[ext_resource type="PackedScene" uid="uid://dpa6d3jry6v01" path="res://assets/weapons/shotgun.tscn" id="2_ytvkw"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_t64o0"]
+size = Vector3(100, 0.1, 100)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_joqaf"]
+albedo_color = Color(0.145098, 0.14902, 0.105882, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_mlo3k"]
+material = SubResource("StandardMaterial3D_joqaf")
+size = Vector3(100, 0.1, 100)
+
+[sub_resource type="BoxMesh" id="BoxMesh_upls5"]
+size = Vector3(3, 3, 3)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Ground" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground"]
+shape = SubResource("BoxShape3D_t64o0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground"]
+mesh = SubResource("BoxMesh_mlo3k")
+
+[node name="Player" parent="." instance=ExtResource("1_8bac4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.13064, 5.52844)
+move_speed = 5.0
+mouse_sensitivity = 1.0
+grounded_move_rate = 15.0
+air_move_rate = 1.0
+jump_height = 5.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.52046, -9.76688)
+mesh = SubResource("BoxMesh_upls5")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.52046, 14.9102)
+mesh = SubResource("BoxMesh_upls5")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.7383, 1.52046, -9.76688)
+mesh = SubResource("BoxMesh_upls5")
+
+[node name="shotgun" parent="." instance=ExtResource("2_ytvkw")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0.728328, 0)
+aimInRotation = Vector3(6, 0, 29)

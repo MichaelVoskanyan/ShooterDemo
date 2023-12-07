@@ -1,0 +1,55 @@
+[gd_scene load_steps=7 format=3 uid="uid://7un5hnq1bu7"]
+
+[ext_resource type="Script" path="res://scripts/Player.cs" id="1_mwrqa"]
+[ext_resource type="Script" path="res://scripts/Hands.cs" id="2_g1tfn"]
+[ext_resource type="Script" path="res://scripts/HudController.cs" id="3_dgflg"]
+[ext_resource type="Texture2D" uid="uid://xsmr8b1f64dy" path="res://assets/crosshair.png" id="3_ou41x"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7bxcr"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_xofpm"]
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_mwrqa")
+gravity = 19.62
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_7bxcr")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_xofpm")
+
+[node name="Neck" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.523192, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Neck"]
+
+[node name="ray" type="RayCast3D" parent="Neck/Camera3D"]
+collision_mask = 2
+
+[node name="EquipSlot" type="Node3D" parent="Neck/Camera3D"]
+script = ExtResource("2_g1tfn")
+
+[node name="Hud" type="Node3D" parent="."]
+script = ExtResource("3_dgflg")
+
+[node name="Ammo" type="Label" parent="Hud"]
+offset_left = 1107.0
+offset_top = 624.0
+offset_right = 1147.0
+offset_bottom = 647.0
+
+[node name="Interact" type="Label" parent="Hud"]
+offset_left = 690.0
+offset_top = 328.0
+offset_right = 730.0
+offset_bottom = 351.0
+
+[node name="Crosshair" type="TextureRect" parent="Hud"]
+visible = false
+offset_left = 518.0
+offset_top = 300.0
+offset_right = 591.0
+offset_bottom = 367.0
+texture = ExtResource("3_ou41x")
+expand_mode = 1
